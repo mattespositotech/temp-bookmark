@@ -1,0 +1,23 @@
+{
+  "name": "Temperary Bookmarks",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "Temperary bookmark a page",
+  "icons": {
+    "128": "icons/bookmark128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "permissions": ["bookmarks", "tabs", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["popup/scripts.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
