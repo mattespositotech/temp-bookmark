@@ -9,7 +9,7 @@
   "action": {
     "default_popup": "popup/popup.html"
   },
-  "permissions": ["bookmarks", "tabs", "storage", "alarms"],
+  "permissions": ["tabs", "storage", "alarms"],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
