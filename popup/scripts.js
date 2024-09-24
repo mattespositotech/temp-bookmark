@@ -1,5 +1,5 @@
 const hourInMilliseconds = 60 * 60 * 1000;
-const dayInMilliseconds = hour * 24;
+const dayInMilliseconds = hourInMilliseconds * 24;
 
 document.addEventListener("DOMContentLoaded", function () {
   const daysElement = document.getElementById("days");
