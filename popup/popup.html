@@ -2,65 +2,59 @@
 <html class="html-sizing">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
     <link rel="stylesheet" href="../styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"
-    />
-
-    <!-- SVG's by !Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
-
-    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" />
+    
+    <!-- Font Awesome License Information -->
+    <!-- SVGs by Font Awesome Free 6.6.0 by @fontawesome (https://fontawesome.com) -->
+    <!-- License: https://fontawesome.com/license/free - Copyright 2024 Fonticons, Inc. -->
+    
+    <script src="scripts.js" defer></script>
   </head>
   <body class="body-sizing">
     <div class="title-box">
-      <div class="large-text">Temporary Bookmarks</div>
+      <h1 class="large-text">Temporary Bookmarks</h1>
     </div>
+    
     <div class="bookmark-action-container-background"></div>
+    
     <div class="bookmark-action-container">
+
+      <!-- Decrease Button -->
       <div class="increment-adjuster">
-        <div class="svg-container" id="decrease">
-          <svg
-            class="actions-svg"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-          >
-            <path
-              d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"
-            />
+        <div class="svg-container circle-feedback" id="decrease">
+          <svg class="actions-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M432 256c0 17.7-14.3 32-32 32H48c-17.7 0-32-14.3-32-32s14.3-32 32-32h352c17.7 0 32 14.3 32 32z"/>
           </svg>
         </div>
+        
+        <!-- Number Display -->
         <div class="increment-number-container">
           <div class="large-text increment-number" id="days">7</div>
         </div>
-        <div class="svg-container" id="increase">
-          <svg
-            class="actions-svg"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-          >
-            <path
-              d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"
-            />
+        
+        <!-- Increase Button -->
+        <div class="svg-container circle-feedback" id="increase">
+          <svg class="actions-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32v144H48c-17.7 0-32 14.3-32 32s14.3 32 32 32h144v144c0 17.7 14.3 32 32 32s32-14.3 32-32V288h144c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/>
           </svg>
         </div>
       </div>
+      
+      <!-- Save Button -->
       <div class="bookmark-svg-container svg-container" id="saveBtn">
-        <svg
-          class="bookmark-svg"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 384 512"
-        >
+        <svg class="bookmark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
           <title>Bookmark This Page</title>
-          <path fill="#475ba1"
-            d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"
-          />
+          <path fill="#475ba1" d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400l153.7 107.6c4.1 2.9 9 4.4 14 4.4 13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/>
         </svg>
       </div>
     </div>
+    
     <div class="corner-colored"></div>
+    
+    <!-- Bookmark List -->
     <div class="bookmark-list-container">
       <div class="bookmark-collection" id="bookmarks">
         <div class="bookmark-item">
@@ -70,27 +64,13 @@
           </div>
           <div class="action-buttons">
             <div class="svg-container">
-              <svg
-                class="bookmark-svg"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-              >
-                <title>Add Another Day</title>
-                <path fill="green"
-                  d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM151.2 217.4c-4.6 4.2-7.2 10.1-7.2 16.4c0 12.3 10 22.3 22.3 22.3l41.7 0 0 96c0 17.7 14.3 32 32 32l32 0c17.7 0 32-14.3 32-32l0-96 41.7 0c12.3 0 22.3-10 22.3-22.3c0-6.2-2.6-12.1-7.2-16.4l-91-84c-3.8-3.5-8.7-5.4-13.9-5.4s-10.1 1.9-13.9 5.4l-91 84z"
-                />
+              <svg class="bookmark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" title="Add Another Day">
+                <path fill="green" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM151.2 217.4c-4.6 4.2-7.2 10.1-7.2 16.4c0 12.3 10 22.3 22.3 22.3h41.7v96c0 17.7 14.3 32 32 32h32c17.7 0 32-14.3 32-32v-96h41.7c12.3 0 22.3-10 22.3-22.3c0-6.2-2.6-12.1-7.2-16.4l-91-84c-3.8-3.5-8.7-5.4-13.9-5.4s-10.1 1.9-13.9 5.4l-91 84z"/>
               </svg>
             </div>
             <div class="svg-container">
-              <svg
-                class="bookmark-svg"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-              >
-                <title>Delete Bookmark</title>
-                <path fill="darkred"
-                  d="M367.2 412.5L99.5 144.8C77.1 176.1 64 214.5 64 256c0 106 86 192 192 192c41.5 0 79.9-13.1 111.2-35.5zm45.3-45.3C434.9 335.9 448 297.5 448 256c0-106-86-192-192-192c-41.5 0-79.9 13.1-111.2 35.5L412.5 367.2zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"
-                />
+              <svg class="bookmark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" title="Delete Bookmark">
+                <path fill="darkred" d="M367.2 412.5L99.5 144.8C77.1 176.1 64 214.5 64 256c0 106 86 192 192 192c41.5 0 79.9-13.1 111.2-35.5zm45.3-45.3C434.9 335.9 448 297.5 448 256c0-106-86-192-192-192c-41.5 0-79.9 13.1-111.2 35.5L412.5 367.2zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/>
               </svg>
             </div>
           </div>
