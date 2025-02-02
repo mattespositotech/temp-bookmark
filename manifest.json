@@ -1,8 +1,8 @@
 {
-  "name": "Temperary Bookmarks",
-  "version": "1.0.0",
+  "name": "Temporary Bookmarks",
+  "version": "1.0.1",
   "manifest_version": 3,
-  "description": "Temperary bookmark a page",
+  "description": "Temporary bookmark a page",
   "icons": {
     "128": "icons/bookmark128.png"
   },
